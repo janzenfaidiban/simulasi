@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 15, 2021 at 05:17 AM
+-- Generation Time: Feb 15, 2021 at 10:46 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -176,8 +176,9 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `nama_depan`, `nama_belakang`, `username`, `foto`, `level`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
 (3, 'Moses', 'Kilang', 'moses', '1613199737_avatar .jpg', 'supervisor', 'admin@moses.com', NULL, '$2y$10$0KOEv9WyTxv4dEZskMV59O7auvXHwBl/mx4TcWwwOk7ezfoT.BEbq', NULL, '2021-02-12 21:55:48', '2021-02-12 22:02:17'),
-(6, 'Theiz', 'Andatu', 'antroy_theiz', '1613199779_58249394.jpg', 'cashier', 'theiz@gmail.com', NULL, '$2y$10$.1HPMfWpaW6sU1YMXrVIyeQmg4IwbQGNuwbtSpfPGPiwySBcYryGy', NULL, '2021-02-12 22:02:59', '2021-02-12 22:02:59'),
-(7, 'Iman', 'Ilham', 'ilham_iman', '1613199846_remaja b.jpg', 'acceptance', 'iman@moses.com', NULL, '$2y$10$ZoX/itGIPU4UA7Kwx9dXmObe.QZ7HBRbo10Kkm28SSuSOgpyGSZnq', NULL, '2021-02-12 22:04:06', '2021-02-12 22:04:06');
+(6, 'Theiz', 'Andatu', 'antroy_theiz', '1613199779_58249394.jpg', 'cashier', 'theiz@gmail.com', NULL, '$2y$10$t.5r.5PJ22L.yP94NEho3uYgoq22tPiXPRdyz.NGYhQUpJJuYWgRK', NULL, '2021-02-12 22:02:59', '2021-02-14 23:10:05'),
+(7, 'Iman', 'Ilham', 'ilham_iman', '1613199846_remaja b.jpg', 'acceptance', 'iman@moses.com', NULL, '$2y$10$ZoX/itGIPU4UA7Kwx9dXmObe.QZ7HBRbo10Kkm28SSuSOgpyGSZnq', NULL, '2021-02-12 22:04:06', '2021-02-12 22:04:06'),
+(8, 'Johan', 'Nasendi', 'johannasendi', '1613369377_photo-1518020382113-a7e8fc38eac9.jpg', 'supervisor', 'jhonnasendi@gmail.com', NULL, '$2y$10$ILjQmGfx4fqh3G.VVGkl5u4A70wbY.XiDDTgHKs6Lkco671L3ZYQ.', NULL, '2021-02-14 21:09:37', '2021-02-14 21:09:37');
 
 --
 -- Indexes for dumped tables
@@ -275,7 +276,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Constraints for dumped tables

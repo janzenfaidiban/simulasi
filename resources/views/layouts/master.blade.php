@@ -189,10 +189,24 @@
                                         </li>
                                         @endif
 
+                                        @if(Auth::user()->level == "supervisor")
                                         <li>
-                                            <a href="#"><i class="icon-lock"></i> <span> Change Password </span></a>
+                                            <a href=" {{route('password.settings')}} "><i class="icon-lock"></i> <span> Change Password </span></a>
                                         </li>
-                                       
+                                        @endif
+
+                                         @if(Auth::user()->level == "acceptance")
+                                        <li>
+                                            <a href=" {{route('password.settings')}} "><i class="icon-lock"></i> <span> Change Password </span></a>
+                                        </li>
+                                        @endif
+
+                                        @if(Auth::user()->level == "cashier")
+                                        <li>
+                                            <a href=" {{route('password.settings')}} "><i class="icon-lock"></i> <span> Change Password </span></a>
+                                        </li>
+                                        @endif
+
                                         
                                         <hr class="my-2">
                                         <li><a href=" {{route('logout.system')}}"><i class="icon-key"></i> <span>Logout</span></a></li>
@@ -218,47 +232,64 @@
                     @if(Auth::user()->level == "supervisor")
                     <li>
                         <a class="" href=" {{route('dashboard.supervisor')}} " aria-expanded="false">
-                           <span class="nav-text">Dashboard</span>
+                        <i class="icon-speedometer menu-icon"></i> <span class="nav-text">Dashboard</span>
                         </a>
-                        <li class="mega-menu mega-menu-sm">                     
-                            <li><a href="{{route('pengguna.index')}}"> Pengguna  </a></li>
+                    </li>
+
+                    
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-grid menu-icon"></i><span class="nav-text">Data</span>
+                        </a>
+                        <ul aria-expanded="false">
+                        <li><a href="{{route('pengguna.index')}}"> Pengguna  </a></li>
                             <li><a href="javascript:void()"> Pelanggan</a></li>                      
                             <li><a href="javascript:void()"> Bandar Udara </a></li>                      
                             <li><a href="javascript:void()"> COMUDITY </a></li>                      
-                            <li><a href="javascript:void()"> Pengaturan Harga</a></li>                      
-                    </li>
+                            <li><a href="javascript:void()"> Pengaturan Harga</a></li>  
+                       
+                        </ul>
                     </li>
                     @endif
 
                     @if(Auth::user()->level == "acceptance")
                     <li>
                         <a class="" href=" {{route('dashboard.acceptance')}} " aria-expanded="false">
-                           <span class="nav-text">Dashboard</span>
+                        <i class="icon-speedometer menu-icon"></i><span class="nav-text">Dashboard</span>
                         </a>
-                      
                     </li>
 
-                    <li class="mega-menu mega-menu-sm">                     
-                            <li><a href="{{route('acceptance.index')}}"> Outgoing  </a></li>
-                            <li><a href=" {{route('acceptance.incoming.index')}} "> Incoming </a></li>                      
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-grid menu-icon"></i><span class="nav-text">Data</span>
+                        </a>
+                        <ul aria-expanded="false">
+                        <li><a href="{{route('acceptance.index')}}"> Outgoing  </a></li>
+                        <li><a href=" {{route('acceptance.incoming.index')}} "> Incoming </a></li>         
+                       
+                        </ul>
                     </li>
-
                     @endif
 
                    
                     @if(Auth::user()->level == "cashier")
                     <li>
                         <a class="" href=" {{route('dashboard.cashier')}} " aria-expanded="false">
-                           <span class="nav-text">Dashboard</span>
+                        <i class="icon-speedometer menu-icon"></i> <span class="nav-text">Dashboard</span>
                         </a>    
                     </li>
 
-                    <li class="mega-menu mega-menu-sm">
-                            
-                            <li><a href="{{route('cashier.outgoing.index')}}"> Outgoing </a></li>
-                            <li><a href=" {{route('cashier.incoming.index')}} "> Incoming </a></li>
+                      <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-grid menu-icon"></i><span class="nav-text">Data</span>
+                        </a>
+                        <ul aria-expanded="false">
+                        <li><a href="{{route('cashier.outgoing.index')}}"> Outgoing </a></li>
+                         <li><a href=" {{route('cashier.incoming.index')}} "> Incoming </a></li>
+                        </ul>
                     </li>
                 @endif
+
                 </ul>
             </div>
         </div>

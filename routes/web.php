@@ -28,11 +28,12 @@ Route::post('/login', 'Auth\LoginallController@masuk')->name('login');
 Route::get('/logout', 'Auth\LoginallController@keluar')->name('logout.system');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/profile', 'HomeController@profile')->name('profile');
-
+Route::get('/ganti/password', 'HomeController@ganti_password')->name('password.settings');
+Route::post('/password/update', 'HomeController@password_update')->name('password.update');
 
 
 Route::group(
-    ['middleware' => ['role:supervisor']],
+    ['middleware' => ['Supervisor:supervisor']],
      function () {
 
      Route::get('/supervisor/dashboard','Supervisor\DashboardController@index')->name('dashboard.supervisor');
@@ -72,7 +73,7 @@ Route::group(
 );
 
 Route::group(
-    ['middleware' => ['Cashier:acceptance']],
+    ['middleware' => ['Acceptance:acceptance']],
      function () {
 
      Route::get('/acceptance/dashboard','Acceptance\DashboardController@index')->name('dashboard.acceptance');
@@ -97,3 +98,4 @@ Route::group(
 
      }
 );
+

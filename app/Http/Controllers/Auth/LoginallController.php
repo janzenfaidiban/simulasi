@@ -46,5 +46,7 @@ class LoginallController extends Controller
   return redirect('/login/moses/kilang');
 }
 
+
+
     
 }

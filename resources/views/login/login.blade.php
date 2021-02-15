@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Login</title>
+    <title>LOGIN</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{url('assest/admin/login/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
@@ -120,7 +120,7 @@
 
 @if(Session::has('status'))
 <script>
-    toastr.success("{!!Session::get('status')!!}")
+    toastr.error("{!!Session::get('status')!!}")
 </script>
 @endif
 
