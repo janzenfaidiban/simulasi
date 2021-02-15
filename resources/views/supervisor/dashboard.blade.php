@@ -4,70 +4,108 @@
 @section('content')
 
 
-   <!--**********************************
-            Content body start
-        ***********************************-->
-        <div class="content-body">
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
 
-            <div class="container-fluid mt-3">
-                <div class="row">
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="card gradient-1">
-                            <div class="card-body">
-                            <a href="{{route('pengguna.index')}}">  <h3 class="card-title text-white"> Pengguna </h3></a>
-                              
-                                <div class="d-inline-block">
-                                    <h2 class="text-white">4565</h2>
-                                    <p class="text-white mb-0"> {{date('D,M,Y')}} </p>
-                                </div>
-                                <span class="float-right display-5 opacity-5"><i class="fa fa-users"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="card gradient-2">
-                            <div class="card-body">
-                                <h3 class="card-title text-white"> Pelanggan </h3>
-                                <div class="d-inline-block">
-                                    <h2 class="text-white">$ 8541</h2>
-                                    <p class="text-white mb-0">{{date('D,M,Y')}}</p>
-                                </div>
-                                <span class="float-right display-5 opacity-5"><i class="fa fa-money"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="card gradient-3">
-                            <div class="card-body">
-                                <h3 class="card-title text-white"> Bandar Udara </h3>
-                                <div class="d-inline-block">
-                                    <h2 class="text-white">4565</h2>
-                                    <p class="text-white mb-0">{{date('D,M,Y')}}</p>
-                                </div>
-                                <span class="float-right display-5 opacity-5"><i class="fa fa-users"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="card gradient-4">
-                            <div class="card-body">
-                                <h3 class="card-title text-white"> Pengaturan </h3>
-                                <div class="d-inline-block">
-                                    <h2 class="text-white">99%</h2>
-                                    <p class="text-white mb-0">{{date('D,M,Y')}}</p>
-                                </div>
-                                <span class="float-right display-5 opacity-5"><i class="fa fa-heart"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="content-page">
+                <div class="content">
 
-             </div>
-            </div>
-            <!-- #/ container -->
-        </div>
-        <!--**********************************
-            Content body end
-        ***********************************-->
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+                               <!-- start page title -->
+                               <div class="row">
+                                <div class="col-12">
+                                    <div class="page-title-box">
+                                        <div class="page-title-right">
+                                            <ol class="breadcrumb m-0">
+                                                <li class="breadcrumb-item"><a href="javascript: void(0);">  Supservisor </a></li>
+                                               
+                                                <li class="breadcrumb-item active">Dashboard</li>
+                                            </ol>
+                                        </div>
+                                        <!-- <h4 class="page-title"></h4> -->
+                                    </div>
+                                </div>
+                            </div>     
+                            <!-- end page title --> 
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box">
+                                    <div class="page-title-right">
+                                        <form class="form-inline">
+                                            <div class="form-group">
+                                                <div class="input-group input-group-sm">
+                                                    <input type="text" class="form-control border-0" id="dash-daterange">
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text bg-secondary border-secondary text-white">
+                                                            <i class="mdi mdi-calendar-range"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                         
+                                        </form>
+                                    </div>
+                                    <h4 class="page-title">DASHBOARD SUPERVISOR  </h4>
+                                </div>
+                            </div>
+                        </div>     
+                        <!-- end page title --> 
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="card-box">
+                                    <div class="dropdown float-center">
+                                        <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">  </a> 
+                                        
+                                         <h1 class="text-center display-1"> Supervisor </h1>
+                                         <br>
+                                           <p class="text-center">Hello, Reinhard. Anda berhasil login sebagai Supervisor.</p>
+                                             <p class="text-center"> Selamat datang di halaman Dashboard Cargo Port System Moses Kilangin Timika</p>
+                                       
+                                        <br><br>
+                                            <div class="button-list text-center">
+                                                <a href="#" class="btn btn-primary btn-lg  waves-effect waves-light">
+                                                    <span class="btn-label"><i class="mdi mdi-check-all"></i></span> OUTGOING
+                                                </a>
+                                                <a href="#" class="btn btn-primary btn-lg  waves-effect waves-light">
+                                                    <span class="btn-label"><i class="mdi mdi-check-all"></i></span> INCOMING
+                                                </a>
+                                                <br>
+                                                <a href=" {{route('pengguna.index')}} " class="btn btn-primary btn-lg  waves-effect waves-light">
+                                                    <span class="btn-label"> <i class=" fas fa-user"></i> </span> PENGGUNA
+                                                </a>
+                                                <a href="pelangan.html" class="btn btn-primary btn-lg  waves-effect waves-light">
+                                                    <span class="btn-label"><i class="mdi mdi-check-all"></i></span> PELANGGAN
+                                                </a>
+                                                <a href="bandar_udara.html" class="btn btn-primary btn-lg  waves-effect waves-light">
+                                                    <span class="btn-label"><i class="mdi mdi-airport"></i></span> BANDAR UDARA
+                                                </a>
+                                                <a href="comudity.html" class="btn btn-primary btn-lg  waves-effect waves-light">
+                                                    <span class="btn-label"><i class="mdi mdi-check-all"></i></span> COMUDITY
+                                                </a>
+                                                <a href="pengaturan.html" class="btn btn-primary btn-lg waves-effect waves-light">
+                                                    <span class="btn-label"> <i class="fe-settings noti-icon"></i></span> PENGATURAN
+                                                </a>
+                                                
+                                            </div>
+                                                                           
+                                    </di>
+
+                                    <div class="table-responsive">
+                                        
+                                    </div>
+                                </div>
+                            </div> <!-- end col -->
+
+                           
+                        </div>
+                        <!-- end row -->
+                        
+                    </div> <!-- container -->
+
+                </div> <!-- content -->  
+
 
 @stop

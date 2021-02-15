@@ -19,8 +19,8 @@ class LoginallController extends Controller
     public function masuk(Request $request)
     {
       // echo "$request->email.$request->password "; die;
-    	if(Auth::attempt($request->only('email','password'))){
-            $akun = DB::table('users')->where('email', $request->email)->first();
+    	if(Auth::attempt($request->only('username','password'))){
+            $akun = DB::table('users')->where('username', $request->username)->first();
             //dd($akun);
             if($akun->level =='supervisor'){
                 return redirect('/supervisor/dashboard')->with('status','Anda Berhasil Login | SELAMAT DATANG SUPERVIOR');

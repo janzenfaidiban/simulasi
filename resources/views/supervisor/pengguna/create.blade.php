@@ -4,37 +4,57 @@
 
 
 
+<div class="content-page">
+                <div class="content">
 
-<div class="content-body">
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+                               <!-- start page title -->
+                               <div class="row">
+                                <div class="col-12">
+                                    <div class="page-title-box">
+                                        <div class="page-title-right">
+                                            <ol class="breadcrumb m-0">
+                                                <li class="breadcrumb-item"><a href="{{route('dashboard.supervisor')}}">  Supservisor </a></li>
+                                                <li class="breadcrumb-item"><a href="{{ route('pengguna.index') }}">Pengguna</a></li>
+                                                <li class="breadcrumb-item active"><a href="javascript:void(0)">Tambah Data </a></li>
+                                            </ol>
+                                        </div>
+                                        <!-- <h4 class="page-title"></h4> -->
+                                    </div>
+                                </div>
+                            </div>     
+                            <!-- end page title --> 
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box">
+                                    <div class="page-title-right">
+                                        <form class="form-inline">
+                                            <div class="form-group">
+                                                <div class="input-group input-group-sm">
+                                                    <input type="text" class="form-control border-0" id="dash-daterange">
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text bg-secondary border-secondary text-white">
+                                                            <i class="mdi mdi-calendar-range"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                         
+                                        </form>
+                                    </div>
+                                    <h4 class="page-title">Tambah Data Pengguna  </h4>
+                                </div>
+                            </div>
+                        </div>     
+                        <!-- end page title --> 
 
-  <div class="row page-titles mx-0 mt-2">
-
-    <h3 class="col p-md-0">Pengguna</h3>
-
-    <div class="col p-md-0">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="{{ route('dashboard.supervisor') }}">Dashboard</a></li>
-        <li class="breadcrumb-item"><a href="{{ route('pengguna.index') }}">Pengguna</a></li>
-        <li class="breadcrumb-item active"><a href="javascript:void(0)">Tambah Data </a></li>
-      </ol>
-    </div>
-
-  </div>
-
-  <div class="container-fluid">
 
     <div class="card">
-
-      <div class="card-header pt-4">
-        <a href="{{ route('pengguna.index') }}" class="btn btn-primary float-right"><i class="fa fa-arrow-left"></i> &nbsp KEMBALI</a>
-        <h4>Tambah Data Pengguna </h4>
-      </div>
-
-      <div class="col-lg-12">
-                       
+                <div class="col-lg-12">
                             <div class="card-body">
                                 <div class="basic-form">
-
                                 <form method="POST" action="{{ route('pengguna.store') }}" enctype="multipart/form-data">
                                   @csrf     
 
@@ -123,7 +143,6 @@
                             </div>
                         </div>
           
-      
       </div>
 
     </div>

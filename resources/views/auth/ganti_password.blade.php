@@ -3,41 +3,66 @@
 @section('content')
 
 
-<div class="content-body">
 
-  <div class="row page-titles mx-0 mt-2">
 
-    <h3 class="col p-md-0">Change Password</h3>
+<div class="content-page">
+                <div class="content">
 
-    <div class="col p-md-0">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
-        <li class="breadcrumb-item active"><a href="javascript:void(0)">Change password</a></li>
-      </ol>
-    </div>
-  </div>
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+                               <!-- start page title -->
+                               <div class="row">
+                                <div class="col-12">
+                                    <div class="page-title-box">
+                                        <div class="page-title-right">
+                                            <ol class="breadcrumb m-0">
+                                         @if(Auth::user()->level == "cashier")
+                                        <li class="breadcrumb-item"><a href="{{route('dashboard.cashier')}}">  Cashier </a></li>
+                                        @endif
+                                        @if(Auth::user()->level == "acceptance")
+                                        <li class="breadcrumb-item"><a href="{{route('dashboard.acceptance')}}">  Acceptance</a></li>
+                                        @endif
 
-  <div class="container-fluid">
+                                        @if(Auth::user()->level == "supervisor")
+                                        <li class="breadcrumb-item"><a href="{{route('dashboard.supervisor')}}"> Supervisor </a></li>
+                                        @endif
+                                               
+                                                <li class="breadcrumb-item active"> Ganti Password </li>
+                                            </ol>
+                                        </div>
+                                        <!-- <h4 class="page-title"></h4> -->
+                                    </div>
+                                </div>
+                            </div>     
+                            <!-- end page title --> 
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box">
+                                    <div class="page-title-right">
+                                        <form class="form-inline">
+                                            <div class="form-group">
+                                                <div class="input-group input-group-sm">
+                                                    <input type="text" class="form-control border-0" id="dash-daterange">
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text bg-secondary border-secondary text-white">
+                                                            <i class="mdi mdi-calendar-range"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                         
+                                        </form>
+                                    </div>
+                                    <h4 class="page-title"> Ganti Password {{auth::user()->level}} </h4>
+                                </div>
+                            </div>
+                        </div>     
+                   <!-- end page title --> 
 
 
     <div class="card">
-
-      <div class="card-header pt-4">
-        <h3 class="card-title">Ganti Password {{auth::user()->level}} </h3>
-      </div>
       <div class="card-body">
-
-        @if (session('error'))
-        <div class="alert alert-danger">
-          {{ session('error') }}
-        </div>
-        @endif
-        @if (session('success'))
-        <div class="alert alert-success">
-          {{ session('success') }}
-        </div>
-        @endif
-
 
         <form class="form-horizontal" method="POST" action="{{ route('password.update') }}">
           {{ csrf_field() }}
@@ -70,6 +95,7 @@
               <button type="submit" class="btn btn-primary">
                 Ganti Password
               </button>
+              <a href="{{route('dashboard.supervisor')}}" class="btn btn-dark">Batal</a>
             </div>
           </div>
 

@@ -1,145 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>LogIn </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta content="Coderthemes" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="#">
 
-<head>
+		<!-- App css -->
+		<link href="{{url('assest/template/assets/css/bootstrap-creative.min.css')}}" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
+		<link href="{{url('assest/template/assets/css/app-creative.min.css')}}" rel="stylesheet" type="text/css" id="app-default-stylesheet" />
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+		<link href="{{url('assest/template/assets/css/bootstrap-creative-dark.min.css')}}" rel="stylesheet" type="text/css" id="bs-dark-stylesheet" />
+		<link href="assets/css/app-creative-dark.min.css" rel="stylesheet" type="text/css" id="app-dark-stylesheet" />
 
-    <title>LOGIN</title>
+		<!-- icons -->
+        <link href="{{url('assest/template/assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
 
-    <!-- Custom fonts for this template-->
-    <link href="{{url('assest/admin/login/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+         <!-- toastr -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
 
-    <!-- Custom styles for this template-->
-    <link href="{{url('assest/admin/login/css/sb-admin-2.min.css')}}" rel="stylesheet">
-    <link href="{{url('assest/admin/login/css/sb-admin-2.css')}}" rel="stylesheet">
+    </head>
 
-    <!-- toastr -->
- <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
-
-</head>
-
-<body class="bg-gradient-primary">
-
-    <div class="container">
-
-        <!-- Outer Row -->
-        <br><br><br><br><br><br>
-        <div class="row justify-content-center">
-
-            <div class="col-xl-10 col-lg-12 col-md-9">
-
-                <div class="card o-hidden border-0 shadow-lg my-5">
-                    <div class="card-body p-0">
-                        <!-- Nested Row within Card Body -->
-                        <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
-                            <div class="col-lg-6">
-                                <div class="p-5">
-                                    <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+    <body class="loading authentication-bg authentication-bg-pattern">
+        <div class="account-pages mt-5 mb-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 col-lg-6 col-xl-5">
+                        <div class="card bg-pattern">
+                            <div class="card-body p-4">                              
+                                <div class="text-center w-75 m-auto">
+                                    <div class="auth-logo">
+                                        <a href="#" class="logo logo-dark text-center">
+                                            <span class="logo-lg">
+                                                <img src="{{url('assest/img/logo.PNG')}}" alt="" height="80">
+                                            </span>
+                                        </a>
+                                        <a href="#" class="logo logo-light text-center">
+                                            <span class="logo-lg">
+                                                <img src="{{url('assest/img/logo.PNG')}}" alt="" height="22">
+                                            </span>
+                                        </a>
                                     </div>
+                                    <p class="text-muted mb-4 mt-1">Selamat Datang di Cargo Port System Moses Kilangin Timika. <br> Silahkan masukan username dan password anda untuk mengakses. </p>
+                                </div>
 
-                                    <form class="user" method="POST" action="{{ route('login') }}">
+                                <form class="user" method="POST" action="{{ route('login') }}">
                                     @csrf
-                                        <div class="form-group">
-                                        <input id="email" type="email" class="form-control form-control-user @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Enter Email Address...">
-                                        @error('email')
+
+                                    <div class="form-group mb-3">
+                                    <label for="username"> Username </label>
+                                        <input id="username" type="text" class="form-control form-control-user @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus placeholder="Masukan Username Anda...">
+                                        @error('username')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
                                  </div>
 
-                                        <div class="form-group">
-                                          <input id="password" type="password" class="form-control form-control-user @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="type your password...">
+                                
+
+                                    <div class="form-group  mb-3">
+                                    <label for="password">Password</label>
+                                        <div class="input-group input-group-merge">
+                                          <input id="password" type="password" class="form-control form-control-user @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Masukan Password Anda...">
+                                          <div class="input-group-append" data-password="false">
+                                                <div class="input-group-text">
+                                                    <span class="password-eye"></span>
+                                                </div>
+                                            </div>
                                             @error('password')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
                                                 </span>
                                             @enderror
                                         </div>
-                                        
-                                        <div class="form-group">
-                                            <div class="custom-control custom-checkbox small">
+                                     </div>
+
+
+                                    <div class="form-group ">
+                                      <div class="custom-control custom-checkbox">
                                             <input class="form-check-input" type="checkbox" name="remember" id="remember"{{old('remember') ? 'checked' : '' }}>
                                             <label class="form-check-label" for="remember">
                                                  {{ __('Remember Me') }}
                                              </label>
                                             </div>
                                         </div>
-                                        <button type="submit" class="btn btn-primary btn-user btn-block">
-                                        {{ __('Login') }}
-                                       </button>
-                                       </form> 
-                                       <br>
-                                       <div class="text-center">
-                                        <a class="small" href="#" data-toggle="modal" data-target="#exampleModal"> Lupa Password </a>
-                                      </div>
 
-                                        <hr>
-                                  
-                                    <div class="text-center">
-                                        <a href="/" class="small" href="forgot-password.html">Back To Home </a>
-                                    </div>
+                                    <button type="submit"  class="btn btn-primary btn-block">
+                                        {{ __('Login') }}
+                                     </button>
+
+                                </form> 
+                                <hr>
+                                <div class="text-center">
+                                 <a class="small" href="#" data-toggle="modal" data-target="#exampleModal"> Lupa Password </a>
+                                </div>
+                                
+                            </div> <!-- end card-body -->
+                    </div>  <!-- end card -->
+                      
 
                                     <!-- Modal -->
-                                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                             <div class="modal-header">
                                                 <h5 class="modal-title" id="exampleModalLabel" style="color:red;"> INFO </h5>
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
+                                             </button>
+                                      </div>
                                             <div class="modal-body">
-                                             <h3>Silakang Hubungi Admin !</h3>
+                                             <h3>Silakang Hubungi Supervesior !</h3>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                             </div>
-                                            </div>
-                                        </div>
-                                        </div>
-
-                                        <!-- end modal -->
+                                         </div>
+                                      </div>
                                 </div>
-                            </div>
+
+                                <!-- end modal -->
+
+
+
+                        <div class="row mt-3">
+                            <div class="col-12 text-center"> 
+                            </div> <!-- end col -->
                         </div>
-                    </div>
+                        <!-- end row -->
+
+                    </div> <!-- end col -->
                 </div>
-
+                <!-- end row -->
             </div>
-
+            <!-- end container -->
         </div>
+        <!-- end page -->
 
-    </div>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="{{url('assest/admin/login/vendor/jquery/jquery.min.js')}}"></script>
-    <script src="{{url('assest/admin/login/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+        <footer class="footer footer-alt text-white-50">
+        &copy;<script>document.write(new Date().getFullYear())</script> <a href="" class="text-white-50"></a> 
+        </footer>
 
-    <!-- Core plugin JavaScript-->
-    <script src="{{url('assest/admin/login/vendor/jquery-easing/jquery.easing.min.js')}}"></script>
+        <!-- Vendor js -->
+        <script src="{{url('assest/template/assets/js/vendor.min.js')}}"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="{{url('assest/admin/login/js/sb-admin-2.min.js')}}"></script>
+        <!-- App js -->
+        <script src="{{url('assest/template/assets/js/app.min.js')}}"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-
-@if(Session::has('status'))
-<script>
-    toastr.error("{!!Session::get('status')!!}")
-</script>
-@endif
-
-</body>
-
+        @if(Session::has('status'))
+        <script>
+            toastr.error("{!!Session::get('status')!!}")
+        </script>
+        @endif
+    </body>
 </html>
