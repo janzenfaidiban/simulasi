@@ -77,23 +77,39 @@
                                         <button type="submit" class="btn btn-primary btn-user btn-block">
                                         {{ __('Login') }}
                                        </button>
-                                       </form>
+                                       </form> 
+                                       <br>
+                                       <div class="text-center">
+                                        <a class="small" href="#" data-toggle="modal" data-target="#exampleModal"> Lupa Password </a>
+                                      </div>
+
                                         <hr>
-                                        
-                                        <!-- <a href="index.html" class="btn btn-google btn-user btn-block">
-                                            <i class="fab fa-google fa-fw"></i> Login with Google
-                                        </a>
-                                        <a href="index.html" class="btn btn-facebook btn-user btn-block">
-                                            <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
-                                        </a> -->
                                   
-                               
                                     <div class="text-center">
                                         <a href="/" class="small" href="forgot-password.html">Back To Home </a>
                                     </div>
-                                    <!-- <div class="text-center">
-                                        <a class="small" href="register.html">Create an Account!</a>
-                                    </div> -->
+
+                                    <!-- Modal -->
+                                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel" style="color:red;"> INFO </h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                             <h3>Silakang Hubungi Admin !</h3>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        </div>
+
+                                        <!-- end modal -->
                                 </div>
                             </div>
                         </div>

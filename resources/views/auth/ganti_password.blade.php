@@ -42,19 +42,6 @@
         <form class="form-horizontal" method="POST" action="{{ route('password.update') }}">
           {{ csrf_field() }}
 
-          <div class="form-group{{ $errors->has('current-password') ? ' has-error' : '' }}">
-            <label for="new-password" class="col-md-4 control-label">Password Sekarang</label>
-
-            <div class="col-md-4">
-              <input id="current-password" type="password" placeholder="********" class="form-control" name="current-password">
-
-              @if ($errors->has('current-password'))
-              <span class="help-block">
-                <strong>{{ $errors->first('current-password') }}</strong>
-              </span>
-              @endif
-            </div>
-          </div>
 
           <div class="form-group{{ $errors->has('new-password') ? ' has-error' : '' }}">
             <label for="new-password" class="col-md-4 control-label">Password Baru</label>
