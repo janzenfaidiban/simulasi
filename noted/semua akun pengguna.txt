@@ -1,0 +1,15 @@
+
+
+Email   supervisor:  admin@moses.com
+pass		: 12345678
+
+
+
+
+Email   Cashier:  theiz@gmail.com
+pass		: 12345678
+
+
+
+Email   acceptance:  iman@moses.com
+pass		: 12345678
