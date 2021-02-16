@@ -309,7 +309,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-12 text-center">
-                                Copyright <script>document.write(new Date().getFullYear())</script> &copy; Design by <a href=""> Janzen </a> 
+                                Copyright <script>document.write(new Date().getFullYear())</script> &copy; Design by <a href=""> SaCode </a> 
                             </div>
                             
                             </div>

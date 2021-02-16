@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>LogIn </title>
+        <title>Login </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
@@ -144,7 +144,7 @@
 
 
         <footer class="footer footer-alt text-white-50">
-        &copy;<script>document.write(new Date().getFullYear())</script> <a href="" class="text-white-50"></a> 
+        &copy;<script>document.write(new Date().getFullYear())</script> SaCode<a href="" class="text-white-50"></a> 
         </footer>
 
         <!-- Vendor js -->
