@@ -112,7 +112,6 @@
                                                 </a>
                                             </td>
                                         </tr> 
-                                        
                                       
                                        </tbody>
                                         <tfoot>
@@ -133,9 +132,7 @@
                                     </table>
                                 </div> <!-- end card-box -->
                             </div> <!-- end col -->
-                        </div>
-
-                        
+                        </div>                        
                     </div> <!-- container -->
 
                 </div> <!-- content -->
@@ -150,12 +147,13 @@
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                 </div>
                 <div class="modal-body">
-                    <h5>Yakin Mau Hapus Data ?...</h5>
-                    
+                <p>Yakin ingin menghapus data ini ?</p>
+                    @csrf
+                    {{ method_field('DELETE') }}
                 </div>
                 <div class="modal-footer text-center">
-                    <a href="" class="btn btn-light" data-dismiss="modal">No</a>
-                    <a href="" class="btn btn-primary">Yes</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="ti-close m-r-5 f-s-12"></i> Batal</button>
+               <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane m-r-5"></i> Ya, Hapus</button>
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->

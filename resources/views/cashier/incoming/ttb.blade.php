@@ -1,22 +1,59 @@
 
-
-
 @extends('layouts.master')
-@section('titile',' Cashier |  Bukti Timbang Barang ')
+@section('titile',' Cashier |  Tanda Terima Barang ')
 @section('content')
 
-
-
-
-<div class="content-body">
-  <div class="container-fluid">
-
-    
- 
-
-            <!-- ============================================================== -->
+  <!-- ============================================================== -->
             <!-- Start Page Content here -->
             <!-- ============================================================== -->
+
+            <div class="content-page">
+                <div class="content">
+
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+                        
+                               <!-- start page title -->
+                               <!-- <div class="row">
+                                <div class="col-12">
+                                    <div class="page-title-box">
+                                        <div class="page-title-right">
+                                            <ol class="breadcrumb m-0">
+                                                <li class="breadcrumb-item"><a href="javascript: void(0);">Acceptance</a></li>
+                                                <li class="breadcrumb-item"><a href="javascript: void(0);"> Outgoing</a></li>
+                                                <li class="breadcrumb-item"><a href="javascript: void(0);"> Transaksi </a></li>
+                                                <li class="breadcrumb-item active">Tambah Data</li>
+                                            </ol>
+                                        </div> -->
+                                        <!-- <h4 class="page-title"> BUKTI TIMBANG BARANG</h4> -->
+                                    <!-- </div>
+                                </div>
+                            </div>      -->
+                            <!-- end page title  -->
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box">
+                                    <div class="page-title-right">
+                                        <form class="form-inline">
+                                            <div class="form-group">
+                                                <div class="input-group input-group-sm">
+                                                    <input type="text" class="form-control border-0" id="dash-daterange">
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text bg-secondary border-secondary text-white">
+                                                            <i class="mdi mdi-calendar-range"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                         
+                                        </form>
+                                    </div>
+                                    <h4 class="page-title"> </h4>
+                                </div>
+                            </div>
+                        </div>     
+                        <!-- end page title --> 
 
                         <div class="row">
                             <div class="col-12">
@@ -27,13 +64,13 @@
                                             <div class="auth-logo">
                                                 <div class="logo logo-dark">
                                                     <span class="logo-lg">
-                                                        <img src="../logo.PNG" alt="" height="52">
+                                                        <img src="{{url('assest/img/logo.PNG')}}" alt="" height="52">
                                                     </span>
                                                 </div>
                             
                                                 <div class="logo logo-light">
                                                     <span class="logo-lg">
-                                                        <img src="../logo.PNG" alt="" height="52">
+                                                        <img src="{{url('assest/img/logo.PNG')}}" alt="" height="52">
                                                     </span>
                                                 </div>
                                             </div>
@@ -173,10 +210,24 @@
                             </div> <!-- end col -->
                         </div>
 
+                       
+                        <!-- end row -->
+                        
+                    </div> <!-- container -->
 
-  </div>
-  <!-- #/ container -->
-</div>
+                </div> <!-- content -->
+
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+
+    
+ 
+
+         
 
 
 @stop
