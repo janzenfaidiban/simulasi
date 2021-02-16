@@ -1,18 +1,8 @@
-
-
-
 @extends('layouts.master')
 @section('titile',' Bukti Timbang Barang ')
 @section('content')
 
-
-
-
-<div class="content-body">
-  <div class="container-fluid">
-
-    
-   <!-- ============================================================== -->
+ <!-- ============================================================== -->
             <!-- Start Page Content here -->
             <!-- ============================================================== -->
 
@@ -39,7 +29,30 @@
                                 </div>
                             </div>      -->
                             <!-- end page title  -->
-                         
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box">
+                                    <div class="page-title-right">
+                                        <form class="form-inline">
+                                            <div class="form-group">
+                                                <div class="input-group input-group-sm">
+                                                    <input type="text" class="form-control border-0" id="dash-daterange">
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text bg-secondary border-secondary text-white">
+                                                            <i class="mdi mdi-calendar-range"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                         
+                                        </form>
+                                    </div>
+                                    <h4 class="page-title"> </h4>
+                                </div>
+                            </div>
+                        </div>     
+                        <!-- end page title --> 
 
                         <div class="row">
                             <div class="col-12">
@@ -50,13 +63,13 @@
                                             <div class="auth-logo">
                                                 <div class="logo logo-dark">
                                                     <span class="logo-lg">
-                                                        <img src="../logo.PNG" alt="" height="52">
+                                                        <img src="{{url('assest/img/logo.PNG')}}" alt="" height="52">
                                                     </span>
                                                 </div>
                             
                                                 <div class="logo logo-light">
                                                     <span class="logo-lg">
-                                                        <img src="../logo.PNG" alt="" height="52">
+                                                        <img src="{{url('assest/img/logo.PNG')}}" alt="" height="52">
                                                     </span>
                                                 </div>
                                             </div>
@@ -75,7 +88,7 @@
                                         </div><!-- end col -->
                                         <div class="col-md-4 offset-md-2">
                                             <div class="mt-3 float-right">
-                                                <p class="m-b-10"><strong> Date : </strong> <span class="float-right" id="dash-daterange"> &nbsp;&nbsp;&nbsp;&nbsp; Timika, {{date('d,M Y')}} </span></p>
+                                                <p class="m-b-10"><strong> Date : </strong> <span class="float-right" id="dash-daterange"> &nbsp;&nbsp;&nbsp;&nbsp; Timika, {{date('d M Y')}}  </span></p>
                                                 <p class="m-b-10"><strong> No : </strong> <span class="float-right">  TTB-TIMCI21010001  </span></p>
                                             </div>
                                         </div><!-- end col -->
@@ -179,21 +192,14 @@
                                 </div> <!-- end card-box -->
                             </div> <!-- end col -->
                         </div>
-
-                       
                         <!-- end row -->
-                        
                     </div> <!-- container -->
-
                 </div> <!-- content -->
+            </div>
 
-
-
-
-  </div>
-  </div>
-  <!-- #/ container -->
-</div>
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
 
 
 @stop

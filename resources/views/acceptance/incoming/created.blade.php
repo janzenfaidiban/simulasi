@@ -1,80 +1,105 @@
-
-
-
 @extends('layouts.master')
 @section('titile',' Tambah Data')
 @section('content')
 
+ <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
 
+            <div class="content-page">
+                <div class="content">
 
-
-<div class="content-body">
-
-  <div class="row page-titles mx-0 mt-2">
-
-    <h3 class="col p-md-0">Incoming</h3>
-
-    <div class="col p-md-0">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="{{ route('dashboard.acceptance') }}"> Acceptance </a></li>
-        <li class="breadcrumb-item"><a href="{{ route('acceptance.incoming.index') }}">Incoming</a></li>
-        <li class="breadcrumb-item active"><a href="javascript:void(0)">Tambah Data </a></li>
-      </ol>
-    </div>
-
-  </div>
-
-  <div class="container-fluid">
-
-    <div class="card">
-
-      <div class="card-header pt-4">
-        <a href="{{ route('acceptance.incoming.index') }}" class="btn btn-primary float-right"><i class="fa fa-arrow-left"></i> &nbsp KEMBALI</a>
-        <h4>TAMBAH DATA INCOMING </h4>
-      </div>
-
-      <div class="col-lg-12">
-                       
-                            <div class="card-body">
-                                <div class="basic-form">
-                                    <form>
-                                        <div class="form-group row">
-                                            <label class="col-sm-2 col-form-label"> Tanggal </label>
-                                            <div class="col-sm-10">
-                                                <input type="date" class="form-control" >
-                                            </div>
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+                        
+                               <!-- start page title -->
+                               <div class="row">
+                                <div class="col-12">
+                                    <div class="page-title-box">
+                                        <div class="page-title-right">
+                                            <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="{{ route('dashboard.acceptance') }}"> Acceptance </a></li>
+                                            <li class="breadcrumb-item"><a href="{{ route('acceptance.incoming.index') }}">Incoming</a></li>
+                                            <li class="breadcrumb-item active"><a href="javascript:void(0)">Tambah Data </a></li>
+                                            </ol>
                                         </div>
-                                        <div class="form-group row">
-                                            <label class="col-sm-2 col-form-label"> No TTB </label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" placeholder="Enter NO BTB">
+                                        <!-- <h4 class="page-title"></h4> -->
+                                    </div>
+                                </div>
+                            </div>     
+                            <!-- end page title --> 
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box">
+                                    <div class="page-title-right">
+                                        <form class="form-inline">
+                                            <div class="form-group">
+                                                <div class="input-group input-group-sm">
+                                                    <input type="text" class="form-control border-0" id="dash-daterange">
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text bg-secondary border-secondary text-white">
+                                                            <i class="mdi mdi-calendar-range"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-
-                                        <div class="form-group row">
-                                            <label class="col-sm-2 col-form-label"> PELANGGAN </label>
-                                            <div class="col-sm-10">
-                                                <input type="password" class="form-control" placeholder=" Enter Pelanggan... ">
-                                            </div>
-                                        </div>
-                                    
-                                       
-                                        <div class="form-group row">
-                                            <div class="col-sm-10">
-                                                <button type="submit" class="btn btn-success"> Simpan </button>
-                                                <a href="{{ route('acceptance.incoming.index') }}" class="btn btn-dark"> Batal</a>
-                                            </div>
-                                        </div>
-                                    </form>
+                                         
+                                        </form>
+                                    </div>
+                                    <h4 class="page-title"> </h4>
                                 </div>
                             </div>
-                        </div>             
+                        </div>     
+                        <!-- end page title --> 
 
-  </div>
-  </div>
-  </div>
-  <!-- #/ container -->
-</div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title"> TAMBAH DATA INCOMING </h4>
+                                <form>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="inputEmail4" class="col-form-label"> Tanggal </label>
+                                            <input type="date" class="form-control"  readonly>
+                                        </div>
+                                    
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="inputCity" class="col-form-label">NO BTB</label>
+                                            <input type="text" class="form-control"   placeholder="TTB-TIMIC21010001" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="inputCity" class="col-form-label">PELANGGAN</label>
+                                            <input type="text" class="form-control" placeholder="type.."  >
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                    <button type="submit" class="btn btn-success"> Simpan </button>
+                                    <a href="{{ route('acceptance.incoming.index') }}" class="btn btn-dark"> Batal</a>
+
+                                </form>
+
+                            </div> <!-- end card-body -->
+                        </div>
+
+
+                        <!-- end row -->
+                        
+                    </div> <!-- container -->
+
+                </div> <!-- content -->
+
+              
+
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
 
 
 @stop

@@ -341,7 +341,7 @@
                         <div class="collapse navbar-collapse" id="topnav-menu-content">
                             <ul class="navbar-nav">
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle arrow-none" href="" id="topnav-dashboard" role="button"
+                                    <a class="nav-link dropdown-toggle arrow-none" href="{{route('acceptance.outgoing.index')}}" id="topnav-dashboard" role="button"
                                          aria-haspopup="true" aria-expanded="true">
                                         <i class="fe-airplay mr-1"></i> OUTGOING 
                                     </a>
@@ -349,7 +349,7 @@
                                 </li>
 
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-apps" role="button"
+                                    <a class="nav-link dropdown-toggle arrow-none" href="{{route('acceptance.incoming.index')}}" id="topnav-apps" role="button"
                                         aria-haspopup="true" aria-expanded="false">
                                         <i class="fe-airplay mr-1"></i>  INCOMING 
                                     </a>

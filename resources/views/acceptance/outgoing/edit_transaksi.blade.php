@@ -1,9 +1,8 @@
 @extends('layouts.master')
-@section('titile',' Tambah Data Transaksi ')
+@section('titile',' Edit Data Transaksi ')
 @section('content')
 
-
-  <!-- ============================================================== -->
+ <!-- ============================================================== -->
             <!-- Start Page Content here -->
             <!-- ============================================================== -->
 
@@ -20,9 +19,9 @@
                                         <div class="page-title-right">
                                             <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="{{ route('dashboard.acceptance') }}"> Acceptance </a></li>
-                                            <li class="breadcrumb-item"><a href="{{ route('acceptance.incoming.index') }}">Incoming</a></li>
-                                            <li class="breadcrumb-item"><a href="{{ route('acceptance.incoming.transaksi') }}">Transaksi</a></li>
-                                            <li class="breadcrumb-item active"><a href="javascript:void(0)">Tambah Data </a></li>
+                                            <li class="breadcrumb-item"><a href="{{ route('acceptance.outgoing.index') }}">Outgoing</a></li>
+                                            <li class="breadcrumb-item"><a href="{{ route('acceptance.outgoing.transaksi') }}">Transaksi</a></li>
+                                            <li class="breadcrumb-item active"><a href="javascript:void(0)">Edit Data </a></li>
                                             </ol>
                                         </div>
                                         <!-- <h4 class="page-title"></h4> -->
@@ -60,18 +59,17 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <center><h4 class="header-title">TAMBAH DATA TRANSAKSI INCOMING </h4></center>
-                                   <hr>
-                                   <br>
+                                    <h4 class="header-title">EDIT  DATA TRANSAKSI OUTGOING</h4>
+                                   
 
                                     <form>
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
-                                                <label for="inputEmail4" class="col-form-label"> TANGGAL </label>
+                                                <label for="inputEmail4" class="col-form-label"> Tanggal </label>
                                                 <input type="date" class="form-control" id="inputEmail4" readonly>
                                             </div>
                                             <div class="form-group col-md-6">
-                                                <label for="inputCity" class="col-form-label">NO TTB</label>
+                                                <label for="inputCity" class="col-form-label">No BTB</label>
                                                 <input type="text" class="form-control" id="inputPassword4" placeholder="type.."  readonly>
                                             </div>
                                         </div>
@@ -115,7 +113,7 @@
 
 
                                         <button type="submit" class="btn btn-success"> Simpan </button>
-                                         <a href=" {{route('acceptance.incoming.transaksi')}} " class="btn btn-dark"> Batal</a>
+                                         <a href=" {{route('acceptance.outgoing.transaksi')}} " class="btn btn-dark"> Batal</a>
 
                                     </form>
 
@@ -128,12 +126,12 @@
                     </div> <!-- container -->
 
                 </div> <!-- content -->
+
             </div>
 
             <!-- ============================================================== -->
             <!-- End Page content -->
             <!-- ============================================================== -->
-        </div>
 
 
 @stop

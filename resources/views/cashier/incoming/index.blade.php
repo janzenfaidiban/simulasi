@@ -134,7 +134,6 @@
                             </div> <!-- end col -->
                         </div>                        
                     </div> <!-- container -->
-
                 </div> <!-- content -->
 
     <!-- Standard modal content -->

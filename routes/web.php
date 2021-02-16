@@ -79,18 +79,20 @@ Route::group(
      Route::get('/acceptance/dashboard','Acceptance\DashboardController@index')->name('dashboard.acceptance');
 
     //  outgoing
-     Route::get('/acceptance/outgoing/index','Acceptance\OutgoingController@index')->name('acceptance.index');
-     Route::get('/acceptance/outgoing/create','Acceptance\OutgoingController@create')->name('acceptance.create');
-     Route::get('/acceptance/outgoing/create/transaksi','Acceptance\OutgoingController@create_transaksi')->name('acceptance.create.transaksi');
-     Route::get('/acceptance/outgoing/transaksi','Acceptance\OutgoingController@transaksi')->name('acceptance.transaksi');
-     Route::get('/acceptance/outgoing/btb','Acceptance\OutgoingController@btb')->name('acceptance.btb');
-     Route::get('/acceptance/outgoing/edit','Acceptance\OutgoingController@edit')->name('acceptance.edit');
+     Route::get('/acceptance/outgoing/index','Acceptance\OutgoingController@index')->name('acceptance.outgoing.index');
+     Route::get('/acceptance/outgoing/create','Acceptance\OutgoingController@create')->name('acceptance.outgoing.create');
+     Route::get('/acceptance/outgoing/create/transaksi','Acceptance\OutgoingController@create_transaksi')->name('acceptance.create.outgoing.transaksi');
+     Route::get('/acceptance/outgoing/edit/transaksi','Acceptance\OutgoingController@edit_transaksi')->name('acceptance.outgoing.edit.transaksi');
+     Route::get('/acceptance/outgoing/transaksi','Acceptance\OutgoingController@transaksi')->name('acceptance.outgoing.transaksi');
+     Route::get('/acceptance/outgoing/btb','Acceptance\OutgoingController@btb')->name('acceptance.outgoing.btb');
+     Route::get('/acceptance/outgoing/edit','Acceptance\OutgoingController@edit')->name('acceptance.outgoing.edit');
 
 
     //  Incoming
      Route::get('/acceptance/incoming/index','Acceptance\IncomingController@index')->name('acceptance.incoming.index');
      Route::get('/acceptance/incoming/create','Acceptance\IncomingController@create')->name('acceptance.incoming.create');
      Route::get('/acceptance/incoming/create/transaksi','Acceptance\IncomingController@create_transaksi_incoming')->name('acceptance.incoming.create.transaksi');
+     Route::get('/acceptance/incoming/edit/transaksi','Acceptance\IncomingController@edit_transaksi_incoming')->name('acceptance.incoming.edit.transaksi');
      Route::get('/acceptance/incoming/transaksi','Acceptance\IncomingController@transaksi_incoming')->name('acceptance.incoming.transaksi');
      Route::get('/acceptance/incoming/ttb','Acceptance\IncomingController@ttb')->name('acceptance.incoming.ttb');
      Route::get('/acceptance/incoming/edit','Acceptance\IncomingController@edit')->name('acceptance.incoming.edit');

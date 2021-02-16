@@ -74,6 +74,11 @@ class OutgoingController extends Controller
         return view('acceptance.outgoing.edit');   
     }
 
+    public function edit_transaksi()
+    {
+        return view('acceptance.outgoing.edit_transaksi');
+    }
+
     /**
      * Update the specified resource in storage.
      *

@@ -73,6 +73,11 @@ class IncomingController extends Controller
         return view('acceptance.incoming.edit');   
     }
 
+    public function edit_transaksi_incoming()
+    {
+        return view('acceptance.incoming.edit_transaksi');
+    }
+
     /**
      * Update the specified resource in storage.
      *

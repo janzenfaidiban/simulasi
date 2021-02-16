@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('titile',' Tambah Data Transaksi ')
+@section('titile',' Edit Data Transaksi ')
 @section('content')
 
 
@@ -22,7 +22,7 @@
                                             <li class="breadcrumb-item"><a href="{{ route('dashboard.acceptance') }}"> Acceptance </a></li>
                                             <li class="breadcrumb-item"><a href="{{ route('acceptance.incoming.index') }}">Incoming</a></li>
                                             <li class="breadcrumb-item"><a href="{{ route('acceptance.incoming.transaksi') }}">Transaksi</a></li>
-                                            <li class="breadcrumb-item active"><a href="javascript:void(0)">Tambah Data </a></li>
+                                            <li class="breadcrumb-item active"><a href="javascript:void(0)">Edit Data </a></li>
                                             </ol>
                                         </div>
                                         <!-- <h4 class="page-title"></h4> -->
@@ -60,7 +60,7 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <center><h4 class="header-title">TAMBAH DATA TRANSAKSI INCOMING </h4></center>
+                                    <center><h4 class="header-title">EDIT DATA TRANSAKSI INCOMING </h4></center>
                                    <hr>
                                    <br>
 
