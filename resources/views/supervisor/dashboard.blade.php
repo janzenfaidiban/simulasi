@@ -61,28 +61,28 @@
                                         
                                          <h1 class="text-center display-1"> Supervisor </h1>
                                          <br>
-                                           <p class="text-center">Hello, Reinhard. Anda berhasil login sebagai Supervisor.</p>
+                                           <p class="text-center">Hello, {{Auth::user()->nama_depan}}. Anda berhasil login sebagai Supervisor.</p>
                                              <p class="text-center"> Selamat datang di halaman Dashboard Cargo Port System Moses Kilangin Timika</p>
                                        
                                         <br><br>
                                             <div class="button-list text-center">
-                                                <a href="#" class="btn btn-primary btn-lg  waves-effect waves-light">
+                                                <a href="{{route('dashboard.outgoing')}}" class="btn btn-primary btn-lg  waves-effect waves-light">
                                                     <span class="btn-label"><i class="mdi mdi-check-all"></i></span> OUTGOING
                                                 </a>
-                                                <a href="#" class="btn btn-primary btn-lg  waves-effect waves-light">
+                                                <a href="{{route('dashboard.incoming')}}" class="btn btn-primary btn-lg  waves-effect waves-light">
                                                     <span class="btn-label"><i class="mdi mdi-check-all"></i></span> INCOMING
                                                 </a>
                                                 <br>
                                                 <a href=" {{route('pengguna.index')}} " class="btn btn-primary btn-lg  waves-effect waves-light">
                                                     <span class="btn-label"> <i class=" fas fa-user"></i> </span> PENGGUNA
                                                 </a>
-                                                <a href="pelangan.html" class="btn btn-primary btn-lg  waves-effect waves-light">
+                                                <a href="{{route('pelanggan.index')}}" class="btn btn-primary btn-lg  waves-effect waves-light">
                                                     <span class="btn-label"><i class="mdi mdi-check-all"></i></span> PELANGGAN
                                                 </a>
-                                                <a href="bandar_udara.html" class="btn btn-primary btn-lg  waves-effect waves-light">
+                                                <a href="{{route('bandarudara.index')}}" class="btn btn-primary btn-lg  waves-effect waves-light">
                                                     <span class="btn-label"><i class="mdi mdi-airport"></i></span> BANDAR UDARA
                                                 </a>
-                                                <a href="comudity.html" class="btn btn-primary btn-lg  waves-effect waves-light">
+                                                <a href="{{route('comudity.index')}}" class="btn btn-primary btn-lg  waves-effect waves-light">
                                                     <span class="btn-label"><i class="mdi mdi-check-all"></i></span> COMUDITY
                                                 </a>
                                                 <a href="pengaturan.html" class="btn btn-primary btn-lg waves-effect waves-light">

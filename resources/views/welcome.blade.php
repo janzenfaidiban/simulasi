@@ -33,7 +33,7 @@
                 <h3>BANDAR UDARA MOSES KILANGIN TIMIKA</h3> -->
                 <hr>
                 <p>Hello! Silahkan klik tombol login <br> untuk mengakses sistem.</p>
-                <a href="/login/moses/kilang" class="btn btn-default btn-lg"><i class="fas fa-sign-in-alt"></i> LOGIN </a>
+                <a href=" {{route('login')}} " class="btn btn-default btn-lg"><i class="fas fa-sign-in-alt"></i> LOGIN </a>
             </div>
         </div>
     </div>

@@ -43,7 +43,7 @@ class LoginallController extends Controller
   } elseif (Auth::guard('web')->check()) {
     Auth::guard('web')->logout();
   }
-  return redirect('/login/moses/kilang');
+  return redirect('/login');
 }
 
 
