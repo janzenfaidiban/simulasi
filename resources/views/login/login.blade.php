@@ -115,7 +115,7 @@
                                              </button>
                                       </div>
                                             <div class="modal-body">
-                                             <h3>Silakang Hubungi Supervesior !</h3>
+                                             <h3>Silakang Hubungi Supervisior !</h3>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

@@ -95,7 +95,17 @@
               <button type="submit" class="btn btn-primary">
                 Ganti Password
               </button>
+              @if(auth::user()->level =="supervisor")
               <a href="{{route('dashboard.supervisor')}}" class="btn btn-dark">Batal</a>
+              @endif
+
+              @if(auth::user()->level =="acceptance")
+              <a href="{{route('dashboard.acceptance')}}" class="btn btn-dark">Batal</a>
+              @endif
+
+              @if(auth::user()->level =="cashier")
+              <a href="{{route('dashboard.cashier')}}" class="btn btn-dark">Batal</a>
+              @endif
             </div>
           </div>
 

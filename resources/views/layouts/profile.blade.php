@@ -74,7 +74,7 @@
                                 <div class="card-box">
                                     <ul class="nav nav-pills navtab-bg nav-justified">
                                         <li class="nav-item">
-                                            <a href="#settings" data-toggle="tab" aria-expanded="false" class="nav-link">
+                                            <a href="#settings" data-toggle="tab" aria-expanded="true" class="nav-link">
                                                 Settings
                                             </a>
                                         </li>
