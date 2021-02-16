@@ -3,53 +3,22 @@
 @section('titile',' Cashier |  Tanda Terima Barang ')
 @section('content')
 
-  <!-- ============================================================== -->
-            <!-- Start Page Content here -->
-            <!-- ============================================================== -->
 
-            <div class="content-page">
-                <div class="content">
+
+<div class="content-page">
+     <div class="content">
 
                     <!-- Start Content-->
                     <div class="container-fluid">
                         
-                               <!-- start page title -->
-                               <!-- <div class="row">
-                                <div class="col-12">
-                                    <div class="page-title-box">
-                                        <div class="page-title-right">
-                                            <ol class="breadcrumb m-0">
-                                                <li class="breadcrumb-item"><a href="javascript: void(0);">Acceptance</a></li>
-                                                <li class="breadcrumb-item"><a href="javascript: void(0);"> Outgoing</a></li>
-                                                <li class="breadcrumb-item"><a href="javascript: void(0);"> Transaksi </a></li>
-                                                <li class="breadcrumb-item active">Tambah Data</li>
-                                            </ol>
-                                        </div> -->
-                                        <!-- <h4 class="page-title"> BUKTI TIMBANG BARANG</h4> -->
-                                    <!-- </div>
-                                </div>
-                            </div>      -->
-                            <!-- end page title  -->
                         <!-- start page title -->
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box">
                                     <div class="page-title-right">
-                                        <form class="form-inline">
-                                            <div class="form-group">
-                                                <div class="input-group input-group-sm">
-                                                    <input type="text" class="form-control border-0" id="dash-daterange">
-                                                    <div class="input-group-append">
-                                                        <span class="input-group-text bg-secondary border-secondary text-white">
-                                                            <i class="mdi mdi-calendar-range"></i>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                         
-                                        </form>
+                                        
                                     </div>
-                                    <h4 class="page-title"> </h4>
+                                    
                                 </div>
                             </div>
                         </div>     
@@ -76,30 +45,32 @@
                                             </div>
                                         </div>
                                         <div class="float-right">
-                                           
+                                            <h4 class="m-0 d-print-none">KWITANSI TANDA TERIMA BARANG</h4>
                                         </div>
                                     </div>
         
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="mt-3">
-                                                <h4 class="m-0 d-print-none">KWITANSI TANDA TERIMA BARANG </h4>
+                                                
                                             </div>
         
                                         </div><!-- end col -->
                                         <div class="col-md-4 offset-md-2">
                                             <div class="mt-3 float-right">
-                                                <p class="m-b-10"><strong> Date : </strong> <span class="float-right" id="dash-daterange"> &nbsp;&nbsp;&nbsp;&nbsp; Timika, {{date('d M Y')}}  </span></p>
-                                                <p class="m-b-10"><strong> No :  </strong> <span class="float-right"> <b> TIMCI21010001 </b> </span></p>
+                                                <p class="m-b-10"><strong> Date : </strong> <span class="float-right"> &nbsp;&nbsp;&nbsp;&nbsp; Timika, {{date('d M Y')}} </span></p>
+                                                <!-- <p class="m-b-10"><strong>Order Status : </strong> <span class="float-right"><span class="badge badge-danger">Unpaid</span></span></p> -->
+                                                <p class="m-b-10"><strong> No. : </strong> <span class="float-right"> TIMCI21010001 </span></p>
                                             </div>
                                         </div><!-- end col -->
                                     </div>
-                                   
+                                    <!-- end row -->
+        
                                     <div class="row mt-3">
                                         <div class="col-sm-6">
                                             <h6> Pengirim </h6>
                                             <address>
-                                               <input type="text" name="" id="" value="REINHARD" readonly>
+                                            REINHARD<br>
                                                 <!-- 795 Folsom Ave, Suite 600<br>
                                                 San Francisco, CA 94107<br>
                                                 <abbr title="Phone">P:</abbr> (123) 456-7890 -->
@@ -109,7 +80,7 @@
                                         <div class="col-sm-6">
                                             <h6> Kasir Gudang </h6>
                                             <address>
-                                                <input type="text" name="" id="" value="IMAM" readonly>
+                                            IMAM<br>
                                                 <!-- 795 Folsom Ave, Suite 600<br>
                                                 San Francisco, CA 94107<br>
                                                 <abbr title="Phone">P:</abbr> (123) 456-7890 -->
@@ -117,117 +88,90 @@
                                         </div> <!-- end col -->
                                     </div> 
                                     <!-- end row -->
-<hr>
+        
                                     <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="card">
-                                                <div class="card-body">
-            
-                                                    <form>
-                                                        <div class="form-group mb-3">
-                                                            <label for="example-input-small"> NO.BTB </label>
-                                                            <input type="text" id="example-input-small" name="example-input-small" class="form-control form-control-sm" placeholder="type.." readonly>
-                                                        </div>
-                                                        <div class="form-group mb-3">
-                                                            <label for="example-input-small"> Telah Terima Dari </label>
-                                                            <input type="text" id="example-input-small" name="example-input-small" class="form-control form-control-sm" placeholder="type.." readonly>
-                                                        </div>
-            
-                                                        <div class="form-group mb-3">
-                                                            <label for="example-input-normal">Sejumlah</label>
-                                                            <input type="text" id="example-input-normal" name="example-input-normal" class="form-control" placeholder="type.." readonly>
-                                                        </div>
-            
-                                                        <div class="form-group mb-3">
-                                                            <label for="example-input-large">Terbilang</label>
-                                                            <input type="text" id="example-input-large" name="example-input-large" class="form-control form-control-lg" placeholder="type.." readonly> 
-                                                        </div>
-                                                        <div class="form-group mb-3">
-                                                            <label for="example-input-large"> Untuk Pembayaran </label>
-                                                            <input type="text" id="example-input-large" name="example-input-large" class="form-control form-control-lg" placeholder="type.." readonly>
-                                                        </div>
-                                                        <div class="form-group mb-3">
-                                                            <label for="example-input-large"> Route </label>
-                                                            <input type="text" id="example-input-large" name="example-input-large" class="form-control form-control-lg" placeholder="type.." readonly>
-                                                        </div>
-                                                        <div class="form-group mb-3">
-                                                            <label for="example-input-large"> Tanda Tangan </label>
-                                                            <textarea class="form-control form-control-lg" name="" id="" cols="10" rows="2"></textarea>
-                                                        </div>
-            
-                                                      
-                                                    </form>
-            
-                                                </div> <!-- end card-body -->
-                                            </div> <!-- end card -->
-                                        </div> <!-- end col -->
-            
-                                        <div class="col-lg-6">
-                                            <div class="card">
-                                                <div class="card-body">
-            
-                                                  
-            
-                                                    <form>
-                                                        <div class="form-group mb-3">
-                                                            <label for="example-input-small"> Tarif </label>
-                                                            <input type="text" id="example-input-small" name="example-input-small" class="form-control form-control-sm" placeholder="type.."  readonly>
-                                                        </div>
-            
-                                                        <div class="form-group mb-3">
-                                                            <label for="example-input-normal">PPN </label>
-                                                            <input type="text" id="example-input-normal" name="example-input-normal" class="form-control" placeholder="type.." readonly>
-                                                        </div>
-                                                        <div class="form-group mb-3">
-                                                            <label for="example-input-normal">PNBP </label>
-                                                            <input type="text" id="example-input-normal" name="example-input-normal" class="form-control" placeholder="type.." readonly>
-                                                        </div>
-                                                        <div class="form-group mb-3">
-                                                            <label for="example-input-normal">ADM </label>
-                                                            <input type="text" id="example-input-normal" name="example-input-normal" class="form-control" placeholder="type.." readonly>
-                                                        </div>
-            
-                                                        <div class="form-group mb-3">
-                                                            <label for="example-input-large">Total</label>
-                                                            <input type="text" id="example-input-large" name="example-input-large" class="form-control form-control-lg" placeholder="type.." readonly>
-                                                        </div>
-                                                    
-                                                      
-                                                    </form>
-            
-                                                </div> <!-- end card-body -->
-                                            </div> <!-- end card -->
+                                        <div class="col-12">
+                                            <div class="table-responsive">
+                                                <table class="table mt-4 table-centered">
+                                                    <thead>
+                                                    <tr><th style="width: 1%">#</th>
+                                                        <th style="width: 10%">NO.BTB</th>
+                                                        <th style="width: 10%"> Telah Terima Dari</th>
+                                                        <th style="width: 10%">Sejumlah</th>
+                                                        <th style="width: 10%">Terbilang</th>
+                                                        <th style="width: 10%"> Untuk Pembayaran</th>
+                                                        <th style="width: 10%"> Route</th>
+                                                        <th style="width: 10%">  Tanda Tangan</th>
+                                                        <!-- <th style="width: 10%" class="text-right">Total</th> -->
+                                                    </tr></thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td> NO. TTB-TIMCI21010001    </td>
+                                                        <td>PT. Surya Gita Nusantara</td>
+                                                        <td>Rp. 165.000,</td>
+                                                        <td>Seratur Enam Puluh Lima Ribu Rupiah</td>
+                                                        <td>1 Transaction Berat (kg)</td>
+                                                        <td>TIM-DJJ</td>
+                                                        <td class="text-right">   </td>
+                                                    </tr>
+                                                   
+        
+                                                    </tbody>
+                                                </table>
+                                            </div> <!-- end table-responsive -->
                                         </div> <!-- end col -->
                                     </div>
-                                   
-                                            <div class="clearfix"></div>
+
+                                    <!-- end row -->
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="table-responsive">
+                                                <table class="table mt-4 table-centered">
+                                                    <thead>
+                                                    <tr><th  style="width: 1%">#</th>
+                                                        <th style="width: 10%"> Tarif</th>
+                                                        <th style="width: 10%">PPN</th>
+                                                        <th style="width: 10%">PNBP</th>
+                                                        <th style="width: 10%">ADM</th>
+                                                        <th style="width: 10%" class="text-right"> Total</th>
+                                                        <!-- <th style="width: 10%" class="text-right">Total</th> -->
+                                                    </tr></thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td> Rp. 130.000,-</td>
+                                                        <td>Rp. 13.000,-</td>
+                                                        <td>Rp. 20.000,-</td>
+                                                        <td>Rp. 2.000,-</td>
+                                                      
+                                                        <td class="text-right"> Rp 165.000,-</td>
+                                                    </tr>
+                                                   
+        
+                                                    </tbody>
+                                                </table>
+                                            </div> <!-- end table-responsive -->
                                         </div> <!-- end col -->
                                     </div>
                                     <!-- end row -->
+                                   
         
-                                  
+                                    <div class="mt-4 mb-1">
+                                        <div class="text-right d-print-none">
+                                            <a href="javascript:window.print()" class="btn btn-primary waves-effect waves-light"><i class="mdi mdi-printer mr-1"></i> Print</a>
+                                            <!-- <a href="#" class="btn btn-info waves-effect waves-light">Submit</a> -->
+                                        </div>
+                                    </div>
                                 </div> <!-- end card-box -->
                             </div> <!-- end col -->
                         </div>
-
-                       
-                        <!-- end row -->
+                        <!-- end row --> 
                         
                     </div> <!-- container -->
 
                 </div> <!-- content -->
 
             </div>
-
-            <!-- ============================================================== -->
-            <!-- End Page content -->
-            <!-- ============================================================== -->
-
-
-    
- 
-
-         
-
 
 @stop
